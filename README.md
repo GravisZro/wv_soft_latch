@@ -10,3 +10,9 @@ This simple circuit is designed to be a safe (low current) way of activating a b
 # Notes
 1. The circuit will *only* latch if an MCU pulls the `Enable` pin low while the momentary switch connected.  This should be the *first* thing your MCU does (within 20 milliseconds) in order to make it appear seemless.
 2. Cheap 0.1" pins typically max out at 3A and 100V, so if you modify this for current exceeding 3A or voltage exceeding 100V then either integrate it into your circuit or select pins carefully.
+
+# Schematic
+<img src="images/schematic_soft_latch_switch.png" width="50%" alt="Image of schematic">
+
+# PCB
+<img src="images/board_front.png" width="40%" alt="Image of PCB front" /><img src="images/board_back.png" width="40%" alt="Image of PCB back" />
