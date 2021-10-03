@@ -10,7 +10,7 @@ This simple circuit is designed to be a safe (low current) way of activating a b
 # Notes
 1. The circuit relies on an MCU to pull the `Enable` pin low, therefore to ensure proper operation, during initalization the MCU should...
   * Check if the MCU was reset by the watchdog timer (AVR uses an `MCUCSR` flag) and pull the `Enable` pin either high or low, depending on the state.
-  * Set the MCU's watchdog timer which will automatically reset the MCU if your code gets stuck.
+  * Set the MCU's watchdog timer which will automatically reset the MCU (and thus turn off the circuit) if your code gets stuck.
 2. Cheap 0.1" pins typically max out at 3A and 100V, so if you modify this for current exceeding 3A or voltage exceeding 100V then either integrate it into your circuit or select pins carefully.
 
 # Schematic
